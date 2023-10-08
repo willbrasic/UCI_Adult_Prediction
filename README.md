@@ -1,1 +1,1 @@
-# UCI_Adults_Prediction
+# The purpose of this repository is to deploy a PyTorch neural network and various other machine learning models on the UCI Adult dataset which can be found at https://archive.ics.uci.edu/dataset/2/adult
