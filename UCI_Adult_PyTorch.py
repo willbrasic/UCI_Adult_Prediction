@@ -20,7 +20,7 @@ linear model for testing which scores at 79.06% accuracy. Since there was not
 much of a difference in training and validation accuracies for these two networks,
 this indicates a neural network is likely not needed to account for non-linearites
 of the data implying a simpler machine learning algorithm may be better. I
-test this hypothesis in UCI_Adult_ML.py.
+test this hypothesis in UCI_Adult_sklearn.py.
 
 
 """
