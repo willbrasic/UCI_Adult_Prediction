@@ -46,7 +46,7 @@ np.set_printoptions(precision = 6)
 np.set_printoptions(suppress = True)
 
 # setting working directory
-os.chdir('C:\\Users\\wbras\\OneDrive\\Desktop\\UA\\Fall_2023\\INFO_557\\INFO_557_HW3')
+os.chdir('C:\\Users\\wbras\\OneDrive\\Desktop\\GitHub\\UCI_Adult_Prediction_PyTorch')
 
 # function to calculate accuracy
 def accuracy_fn(y_true, y_pred):
@@ -77,7 +77,7 @@ Data Preprocessing
 
 
 # load in data
-df = pd.read_csv('INFO_557_HW3_Data.csv')
+df = pd.read_csv('UCI_Adult_Data.csv')
 
 # making income a binary variable
 df['income'] = df['income'].apply(lambda x: 1 if x == '>50K' else 0)
@@ -188,6 +188,7 @@ print(f"Length of test dataloader: {len(test_dataloader)} batches of {batch_size
 Data Visualization Using Original Data
 
 """
+
 
 # setting plot stype to ggplot
 plt.style.use('ggplot')
@@ -685,7 +686,7 @@ plt.show()
 
 """
 
-Neural Network Testing with Model 1
+Neural Network Testing with Model 0
 
 """
 
@@ -694,7 +695,7 @@ Neural Network Testing with Model 1
 loss_fn = nn.BCEWithLogitsLoss()
 
 # defining the optimizer
-optimizer = torch.optim.SGD(params = model_1.parameters(), lr = 0.1, momentum = 0.9, nesterov = True)
+optimizer = torch.optim.SGD(params = model_0.parameters(), lr = 0.1, momentum = 0.9, nesterov = True)
 
 # parameters needed for early stopping
 best_val_loss = float('inf')
@@ -705,7 +706,7 @@ patience = 10
 torch.manual_seed(1024)
 
 # set model to evaluation mode
-model_1.eval()
+model_0.eval()
 
 # initialize values to keep track of testing
 test_loss = 0
@@ -716,7 +717,7 @@ y_pred_tracker = []
 y_true_tracker = []
 
 # set model to evaluation mode
-model_1.eval()
+model_0.eval()
 
 # begin the inference procedure
 with torch.inference_mode():
@@ -724,7 +725,7 @@ with torch.inference_mode():
     for batch, (X, y) in enumerate(test_dataloader):
 
         # calculate the predicted logits
-        y_logits = model_1(X).squeeze()
+        y_logits = model_0(X).squeeze()
 
         # convert logits to binary predictions (0 or 1)
         y_pred = torch.round(torch.sigmoid(y_logits))
