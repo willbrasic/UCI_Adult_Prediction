@@ -1,10 +1,4 @@
-## The purpose of this repository is to deploy a PyTorch neural network and various other machine learning models on the UCI Adult dataset which can be found at in repository at UCI_Adult_Data.csv.
 
-### The neural network can be found at UCI_NN.py and the machine learning algorithms can be found at UCI_ML.py
-
-### After some preprocessing to make the dataset more general, I find a random forest classifer works best, while there is not much difference in performance between the neural network with only linear layers and that of a neural network with a variety of non-linear layers
-
-### This project is incomplete
 
 # UCI Adult Prediction with Pytorch and sklearn
 
@@ -30,17 +24,13 @@ which can be found at UCI_Adult_Data.csv.
   - [Training](#training)
   - [Evaluation](#evaluation)
   - [Results](#results)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
 
 ## Features
 
-List key features and functionalities of your project:
+The key features of my project are as follows:
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Neural network using PyTorch
+- Logistic regression, random forest, and catboost using sklearn
 
 ## Getting Started
 
@@ -48,10 +38,28 @@ Provide instructions on how to get your project up and running on a user's local
 
 ### Prerequisites
 
-List any dependencies or prerequisites users need to install before they can use your project. Include versions if necessary.
+Main dependencies:
 
 ```bash
-# Example
-Python 3.7+
-PyTorch 1.8+
-scikit-learn 0.24+
+imbalanced_learn==0.11.0
+imblearn==0.0
+matplotlib==3.7.2
+numpy==1.25.2
+pandas==2.1.1
+scikit_learn==1.3.0
+seaborn==0.13.0
+torch==2.0.1
+```
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn.git
+
+# Navigate to the project directory
+cd UCI_Adult_PyTorch_sklearn
+
+# Install dependencies
+pip install -r requirements.txt
+```
