@@ -57,7 +57,7 @@ np.set_printoptions(precision = 6)
 np.set_printoptions(suppress = True)
 
 # setting working directory
-os.chdir('C:\\Users\\wbras\\OneDrive\\Desktop\\GitHub\\UCI_Adult_Prediction_PyTorch')
+os.chdir('C:\\Users\\wbras\\OneDrive\\Desktop\\GitHub\\UCI_Adult_PyTorch_sklearn')
 
 # function to calculate accuracy
 def accuracy_fn(y_true, y_pred):
