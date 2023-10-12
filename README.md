@@ -18,7 +18,6 @@ which can be found at UCI_Adult_Data.csv.
 - [UCI Adult Prediction with PyTorch and sklearn](#project-name)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
-  - [Features](#features)
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
@@ -26,16 +25,9 @@ which can be found at UCI_Adult_Data.csv.
   - [Training](#training)
   - [Results](#results)
 
-## Features
-
-The key features of my project are as follows:
-
-- Neural network using PyTorch
-- Logistic regression, random forest, and catboost using sklearn
-
 ## Getting Started
 
-Provide instructions on how to get your project up and running on a user's local machine.
+Below are some instructions on how to get the project up and running.
 
 ### Prerequisites
 
@@ -71,7 +63,7 @@ This project uses the Adult UCI dataset which can be found in the repository at
 UCI_Adult_Data.csv. Details can be found at https://archive.ics.uci.edu/dataset/2/adult.
 The data cleaning procedure can be found at UCI_Adult_PyTorch.py. Here are some graphs
 that summarize the outcome of interest (income) along with the covariates used
-for prediction
+for prediction:
 
 ![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_1.png)
 
@@ -79,7 +71,7 @@ for prediction
 
 ## Training
 
-I create a two neural networks: one which only contains linear activations
+I create two neural networks: one which only contains linear activations
 and another more complex network with multiple hidden layers, BatchNorm, dropout,
 and ELU (https://pytorch.org/docs/stable/generated/torch.nn.ELU.html) activations
 which is a good alternative for ReLU that avoids non-differentiability at zero.
@@ -91,20 +83,19 @@ over epochs looks as follows:
 
 ![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_3.png)
 
-
-The training and validation los and accuracy for the non-linear neural network
+The training and validation loss and accuracy for the non-linear neural network
 over epochs looks as follows:
 
 ![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_4.png)
 
-As evidence by the accuracy over epochs for each model, they perform very similar.
+As evidenced by the accuracy over epochs for each model, they perform very similar.
 However, the linear neural network is less prone to overfitting as indicated by
 the smaller gap between training and validation loss curves relative to that of
 the non-linear model. Thus, the linear model is selected for testing.
 
-Given such a simple model seemingly works better, this indicates that more straightforward
+Given such a simple model seemingly works better, this indicates that a more straightforward
 prediction algorithm outside of deep learning may be more appropriate for this task.
-This is explored in UCI_Adult_Scikit-Learn.py and README_2.md.
+This is explored in UCI_Adult_Scikit-Learn.py and with details at README_2.md.
 
 ## Results
 
