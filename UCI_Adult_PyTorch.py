@@ -1,27 +1,6 @@
 """
 
-
-This program creates a PyTorch Neural Network for prediction on the UCI Adult
-dataset which can be found at https://archive.ics.uci.edu/dataset/2/adult.
-
-Firstly, I create a simple linear neural network with two layers.
-
-Secondly, I create a more complex non-linear neural network using the ELU
-activation function to avoid non-differentiability at 0. This network
-also has layers to incorporate batchnorm to improve optimization performance
-and drop out to reduce model variance.
-
-Both networks incorporate early stopping to increase algorithm performance.
-
-While the linear and non-linear networks both perform similarly, the linear
-model seems to be less prone to overfitting as evidence by the plots
-of training and validation loss curves over epochs. Thus, I selected the
-linear model for testing which scores at 79.06% accuracy. Since there was not
-much of a difference in training and validation accuracies for these two networks,
-this indicates a neural network is likely not needed to account for non-linearites
-of the data implying a simpler machine learning algorithm may be better. I
-test this hypothesis in UCI_Adult_sklearn.py.
-
+UCI Adult PyTorch Neural Network
 
 """
 
