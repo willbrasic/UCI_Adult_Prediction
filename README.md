@@ -19,7 +19,6 @@ which can be found at UCI_Adult_Data.csv.
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-  - [Usage](#usage)
   - [Dataset](#dataset)
   - [Training](#training)
   - [Evaluation](#evaluation)
@@ -63,3 +62,9 @@ cd UCI_Adult_PyTorch_sklearn
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+## Dataset
+
+This project uses the Adult UCI dataset which can be found in the repository at
+UCI_Adult_Data.csv. Details can be found at https://archive.ics.uci.edu/dataset/2/adult.
+The data cleaning procedure can be found at UCI_Adult_PyTorch.py.

@@ -2,7 +2,7 @@
 
 
 This program creates a PyTorch Neural Network for prediction on the UCI Adult
-dataset which can be found at https://www.kaggle.com/datasets/wenruliu/adult-income-dataset.
+dataset which can be found at https://archive.ics.uci.edu/dataset/2/adult.
 
 Firstly, I create a simple linear neural network with two layers.
 
