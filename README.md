@@ -1,8 +1,11 @@
 
 
-# UCI Adult Prediction with Pytorch and sklearn
+# UCI Adult Prediction with Pytorch and Scikit-Learn
 
-Hi there! Thank you for checking out my repository!
+Hi there! Thank you for checking out my repository! This README.md file gives
+details on the neural networks used for prediction while the REAME_2.md file
+dives into using simpler machine learning algorithms for prediction to juxtapose
+their effectiveness with that of deep learning.
 
 ## Overview
 
@@ -21,7 +24,6 @@ which can be found at UCI_Adult_Data.csv.
     - [Installation](#installation)
   - [Dataset](#dataset)
   - [Training](#training)
-  - [Evaluation](#evaluation)
   - [Results](#results)
 
 ## Features
@@ -100,10 +102,13 @@ However, the linear neural network is less prone to overfitting as indicated by
 the smaller gap between training and validation loss curves relative to that of
 the non-linear model. Thus, the linear model is selected for testing.
 
+Given such a simple model seemingly works better, this indicates that more straightforward
+prediction algorithm outside of deep learning may be more appropriate for this task.
+This is explored in UCI_Adult_Scikit-Learn.py and README_2.md.
 
-## Evaluation
+## Results
 
 The linear neural network finishes with a testing accuracy of 79.12%. Here is
 the confusion matrix:
 
-![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_5.png)
+![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_5.png)
