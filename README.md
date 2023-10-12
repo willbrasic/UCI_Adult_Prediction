@@ -1,6 +1,6 @@
 
 
-# UCI Adult Prediction with Pytorch and Scikit-Learn
+# UCI Adult Prediction with Pytorch
 
 Hi there! Thank you for checking out my repository! This README.md file gives
 details on the neural networks used for prediction while the REAME_2.md file
