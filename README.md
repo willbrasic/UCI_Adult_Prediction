@@ -11,11 +11,12 @@ their effectiveness with that of deep learning.
 
 This repository contains code for deploying a PyTorch neural network in the UCI_Adult_PyTorch.py file
 along with various machine learning algorithms in UCI_Adult_sklearn.py on the UCI Adult dataset
-which can be found at UCI_Adult_Data.csv.
+which can be found at UCI_Adult_Data.csv. Here, we focus on the former. For details on
+the simpler machine learning models, please look at the README_2.md file.
 
 ## Table of Contents
 
-- [UCI Adult Prediction with PyTorch and sklearn](#project-name)
+- [UCI Adult Prediction with PyTorch](#project-name)
   - [Overview](#overview)
   - [Table of Contents](#table-of-contents)
   - [Getting Started](#getting-started)
@@ -48,10 +49,10 @@ torch==2.0.1
 
 ```bash
 # Clone the repository
-git clone https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn.git
+git clone https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn.git
 
 # Navigate to the project directory
-cd UCI_Adult_PyTorch_sklearn
+cd UCI_Adult_PyTorch_Scikit-Learn
 
 # Install dependencies
 pip install -r requirements.txt
