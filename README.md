@@ -67,4 +67,22 @@ pip install -r requirements.txt
 
 This project uses the Adult UCI dataset which can be found in the repository at
 UCI_Adult_Data.csv. Details can be found at https://archive.ics.uci.edu/dataset/2/adult.
-The data cleaning procedure can be found at UCI_Adult_PyTorch.py.
+The data cleaning procedure can be found at UCI_Adult_PyTorch.py. Here are some graphs
+that summarize the outcome of interest (income) along with the covariates used
+for prediction
+
+![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_1.png)
+
+![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_2.png)
+
+## Training
+
+I create a two neural networks: one which only contains linear activations
+and another more complex network with multiple hidden layers, BatchNorm, dropout,
+and ELU (https://pytorch.org/docs/stable/generated/torch.nn.ELU.html) activations
+which is a good alternative for ReLU that avoids non-differentiability at zero.
+
+The training and validation loss and accuracies for the linear neural network look
+as follows:
+
+![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_3.png)
