@@ -72,22 +72,22 @@ for prediction:
 
 ## Training
 
-I create two neural networks: one which only contains linear activations
-and another more complex network with multiple hidden layers, BatchNorm, dropout,
-and ELU (https://pytorch.org/docs/stable/generated/torch.nn.ELU.html) activations
-which is a good alternative for ReLU that avoids non-differentiability at zero.
-Both networks use Nesterov momentum with parameter γ = 0.9 to improve
+I create three neural networks: one which only contains linear activations
+one complex network with multiple hidden layers, BatchNorm, dropout,
+and ELU, and a last neural network with multiple hidden linear hidden layers
+along with BatchNorm and dropout. ELU
+(https://pytorch.org/docs/stable/generated/torch.nn.ELU.html) activations
+are a good alternative for ReLU that avoids non-differentiability at zero.
+All networks use Nesterov momentum with parameter γ = 0.9 to improve
 optimization performance.
 
 The training and validation loss and accuracy for the linear neural network
 over epochs looks as follows:
 
-![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_3.png)
 
 The training and validation loss and accuracy for the non-linear neural network
 over epochs looks as follows:
 
-![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_4.png)
 
 As evidenced by the accuracy over epochs for each model, they perform very similar.
 However, the linear neural network is less prone to overfitting as indicated by
@@ -102,5 +102,3 @@ This is explored in UCI_Adult_Scikit-Learn.py and with details at README_2.md.
 
 The linear neural network finishes with a testing accuracy of 79.12%. Here is
 the confusion matrix:
-
-![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_5.png)
