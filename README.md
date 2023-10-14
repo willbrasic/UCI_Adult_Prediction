@@ -66,23 +66,31 @@ The data cleaning procedure can be found at UCI_Adult_PyTorch.py. Here are some 
 that summarize the outcome of interest (income) along with the covariates used
 for prediction:
 
-![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_1.png)
+![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Data_Summary_1.png)
 
-![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_2.png)
+![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Data_Summary_2.png)
+
+Also, the data does have a slight issue with class proportions with class 0
+(individuals making less than $50,000) being undersampled. I tested if SMOTE could
+improve this. While precision did increase, overall validation accuracy decreased leading
+me to not use this method as I prioritize accuracy in general over an increase in precision. 
 
 ## Training
 
-I create three neural networks: one which only contains linear activations
-one complex network with multiple hidden layers, BatchNorm, dropout,
-and ELU, and a last neural network with multiple hidden linear hidden layers
-along with BatchNorm and dropout. ELU
+I create three neural networks: model_0 which only contains linear activations,
+model_1 which contains complex network with multiple hidden layers, BatchNorm, dropout,
+and ELU, and model_2 which contains multiple hidden linear
+hidden layers (no non-linear layers) along with BatchNorm and dropout. ELU
 (https://pytorch.org/docs/stable/generated/torch.nn.ELU.html) activations
 are a good alternative for ReLU that avoids non-differentiability at zero.
 All networks use Nesterov momentum with parameter γ = 0.9 to improve
 optimization performance.
 
-The training and validation loss and accuracy for the linear neural network
-over epochs looks as follows:
+The training and validation loss and accuracy for model_0
+over epochs along with its confusion matrix looks as follows:
+
+![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Train_Val_Model_0.png)
+
 
 
 The training and validation loss and accuracy for the non-linear neural network
