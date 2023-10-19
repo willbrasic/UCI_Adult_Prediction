@@ -1069,7 +1069,7 @@ with torch.inference_mode():
     test_accuracy = 100 * test_correct / test_total
 
 # printing testing loss and accuracy
-print(f'Test loss: {test_loss:.5f} | Testing acc: {test_accuracy:.2f}%\n')
+print(f'Test loss: {test_loss:.5f} | Testing acc: {test_accuracy:.4f}%\n')
 
 # create confusion matrix
 conf_matrix = confusion_matrix(y_true_tracker, y_pred_tracker)
