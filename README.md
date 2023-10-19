@@ -83,7 +83,7 @@ me to not use this method as I prioritize accuracy in general over an increase i
 For the sake of completeness, here is the confusion matrix when model_1,
 which is discussed in the Training section, is used on the data when SMOTE is applied:
 
-![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Smote_Model_1.png)
+![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Smote_Model_1_CM.png)
 
 ## Training
 
