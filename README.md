@@ -15,7 +15,7 @@ I hope you enjoy reading through my project!
 ## Overview
 
 This repository contains code for deploying a PyTorch neural network in the UCI_Adult_PyTorch.py file
-along with various machine learning algorithms in UCI_Adult_sklearn.py on the UCI Adult dataset
+along with various machine learning algorithms in UCI_Adult_Scikit-Learn.py on the UCI Adult dataset
 which can be found at UCI_Adult_Data.csv. Here, we focus on the former. For details on
 the simpler machine learning models, please look at the README_2.md file.
 
