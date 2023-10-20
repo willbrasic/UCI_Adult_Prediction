@@ -3,13 +3,14 @@
 # UCI Adult Prediction with Pytorch
 
 Hi there! Thank you for checking out my repository! This README.md file gives
-details on the neural networks used for prediction while the REAME_2.md file
-dives into using simpler machine learning algorithms for prediction to juxtapose
+details on the neural networks used while the REAME_2.md file
+dives into using simpler machine learning algorithms to juxtapose
 their effectiveness with that of deep learning.
 
 My chosen neural network (82.227% test accuracy rate), which is elucidated below,
 performs considerably above the 0.75 quantile (79.037% test accuracy rate)
-of all neural networks used for this dataset.
+of all reported neural networks used for this dataset
+(see https://archive.ics.uci.edu/dataset/2/adult).
 I hope you enjoy reading through my project!
 
 ## Overview
@@ -75,7 +76,7 @@ for prediction:
 
 ![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Data_Summary_2.png)
 
-Also, the data does have a slight issue regarding class proportions with class 0
+Also, the data does have a slight issue regarding class proportions with class 1
 (individuals making more than $50,000) being under-sampled. I tested if SMOTE could
 improve this. While precision did increase, overall validation accuracy decreased leading
 me to not use this method as I prioritize accuracy in general over an increase in precision.
@@ -95,6 +96,7 @@ along with BatchNorm and dropout. ELU
 are a good alternative for ReLU that avoids non-differentiability at zero.
 All networks use learning rate α = 0.01 and
 Nesterov momentum with parameter γ = 0.9 to improve optimization performance.
+Moreover, all neural networks implement early stopping. 
 
 The training and validation loss and accuracy for model_0
 over epochs along with its confusion matrix looks as follows:
