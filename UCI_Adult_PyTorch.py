@@ -103,20 +103,20 @@ new_df['age'] = ( df['age'] - df['age'].mean() ) / df['age'].std()
 X = new_df.drop('income', axis = 1)
 y = new_df['income']
 
-# Instantiate SMOTE class
+# instantiate SMOTE class
 smote = SMOTE(sampling_strategy = 'minority', random_state = 1024)
 
-# Use smote to resample the data
+# use smote to resample the data
 X_resampled, y_resampled = smote.fit_resample(X, y)
 
-# Inspecting new class proportions
-(y_resampled.value_counts() / len(y_resampled)).round(4)
+# inspecting new class proportions
+(y_resampled.value_counts() / len(y_resampled)).round(4);
 
 # checking for NaNs
 X.isnull().values.any();
 y.isnull().values.any();
 
-# train and test split
+# train and test split without SMOTE
 X_train, X_test, y_train, y_test = train_test_split(X, y,
                                                     test_size = 0.25,
                                                     random_state = 1024)
@@ -205,7 +205,6 @@ plt.title('KDE Plot for Occupation by Income')
 plt.xlabel('Age')
 plt.legend(title = 'Occupation', bbox_to_anchor=(1.25, 1), borderaxespad=0)
 plt.show()
-
 
 
 """
@@ -460,7 +459,7 @@ for epoch in range(epochs):
 
         # append the accuracy for the epoch to the train_accur list
         val_accuracies.append(val_accuracy)
-        
+
         # convert y_pred from a tensor to a numpy array
         y_pred_numpy = y_pred.numpy()
 
@@ -696,7 +695,7 @@ for epoch in range(epochs):
 
         # append the accuracy for the epoch to the train_accur list
         val_accuracies.append(val_accuracy)
-        
+
         # convert y_pred from a tensor to a numpy array
         y_pred_numpy = y_pred.numpy()
 
@@ -933,7 +932,7 @@ for epoch in range(epochs):
 
         # append the accuracy for the epoch to the train_accur list
         val_accuracies.append(val_accuracy)
-        
+
         # convert y_pred from a tensor to a numpy array
         y_pred_numpy = y_pred.numpy()
 
@@ -1083,4 +1082,3 @@ plt.xlabel('Predicted')
 plt.ylabel('Actual')
 plt.title('Confusion Matrix')
 plt.show()
-
