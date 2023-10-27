@@ -78,8 +78,8 @@ for prediction:
 
 Also, the data does have a slight issue regarding class proportions with class 1
 (individuals making more than $50,000) being under-sampled. I tested if SMOTE could
-improve this. While precision did increase, overall validation accuracy decreased leading
-me to not use this method as I prioritize accuracy in general over an increase in precision.
+improve this. While recall did increase, overall validation accuracy decreased leading
+me to not use this method as I prioritize accuracy in general over an increase in recall.
 
 For the sake of completeness, here is the confusion matrix when model_1,
 which is discussed in the Training section, is used on the data when SMOTE is applied:
@@ -96,7 +96,7 @@ along with BatchNorm and dropout. ELU
 are a good alternative for ReLU that avoids non-differentiability at zero.
 All networks use learning rate α = 0.01 and
 Nesterov momentum with parameter γ = 0.9 to improve optimization performance.
-Moreover, all neural networks implement early stopping. 
+Moreover, all neural networks implement early stopping.
 
 The training and validation loss and accuracy for model_0
 over epochs along with its confusion matrix looks as follows:
