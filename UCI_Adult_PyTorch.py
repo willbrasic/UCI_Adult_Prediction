@@ -31,32 +31,14 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix
 from imblearn.over_sampling import SMOTE
 
+# setting plot stype to ggplot
+plt.style.use('ggplot')
+
 # arrays are printed up to 6 digits and without scientific notation
-np.set_printoptions(precision = 6)
-np.set_printoptions(suppress = True)
+np.set_printoptions(precision = 6, suppress = True)
 
 # setting working directory
 os.chdir('C:\\Users\\wbras\\OneDrive\\Desktop\\GitHub\\UCI_Adult_PyTorch_Scikit-Learn')
-
-# function to calculate accuracy
-def accuracy_fn(y_true, y_pred):
-    """Calculates accuracy between truth labels and predictions.
-
-    Args:
-        y_true (torch.Tensor): Truth labels for predictions.
-        y_pred (torch.Tensor): Predictions to be compared to predictions.
-
-    Returns:
-        [torch.float]: Accuracy value between y_true and y_pred, e.g. 78.45
-    """
-    # get the number of correction predictions
-    correct = torch.eq(y_true, y_pred).sum().item()
-
-    # compute the accuracy rate
-    acc = (correct / len(y_pred)) * 100
-
-    # return the accuracy rate
-    return acc
 
 
 """
@@ -174,16 +156,13 @@ Data Visualization Using Original Data
 """
 
 
-# setting plot stype to ggplot
-plt.style.use('ggplot')
-
 # figure size for the two subplots below
 plt.figure(figsize = (10, 10))
 
 # countplot of income grouped by gender
 plt.subplot(2, 1, 1)
 sns.countplot(data = df, x = 'income', hue = 'gender').set_xticklabels(['<=50K', '>50K'])
-plt.title('Income for Males and Females')
+plt.title('Count Plot of Income by Gender')
 plt.xlabel('Income')
 plt.ylabel('Count')
 plt.legend(title = 'Gender', loc = 'upper right', labels = ['Female', 'Male'])
@@ -193,7 +172,7 @@ plt.subplot(2, 1, 2)
 sns.kdeplot(data = df, x = 'age', hue = 'income')
 plt.title("KDE Plot for Age by Income")
 plt.xlabel('Age')
-plt.legend(title = 'Income', loc = 'upper right', labels = ['<=50K', '>50K'])
+plt.legend(title = 'Income', loc = 'upper right', labels = ['>50K', '<=50K'])
 
 # show the above plots
 plt.tight_layout()
@@ -201,8 +180,10 @@ plt.show()
 
 # countplot of income grouped by occupation
 sns.countplot(data = df, x = 'income', hue = 'occupation')
-plt.title('KDE Plot for Occupation by Income')
-plt.xlabel('Age')
+plt.title('Count Plot of Income by Occupation')
+plt.xlabel('Income')
+plt.ylabel('Count')
+plt.xticks(range(2), ['<= 50K', '>50K'])
 plt.legend(title = 'Occupation', bbox_to_anchor=(1.25, 1), borderaxespad=0)
 plt.show()
 
@@ -229,7 +210,7 @@ class nn_model_0(nn.Module):
         return self.layer_stack(x)
 
 
-# creating linear neural network
+# creating non-linear neural network
 class nn_model_1(nn.Module):
     # input shape is number of features
     def __init__(self, input_shape: int, hidden_units: int, output_shape: int):
@@ -361,9 +342,6 @@ for epoch in range(epochs):
 
         # calculate loss
         loss = loss_fn(y_logits, y)
-
-        # calculate accuracy
-        acc = accuracy_fn(y_true=y, y_pred=y_pred)
 
         # optimizer zero grad
         optimizer_0.zero_grad()
@@ -598,9 +576,6 @@ for epoch in range(epochs):
         # calculate loss
         loss = loss_fn(y_logits, y)
 
-        # calculate accuracy
-        acc = accuracy_fn(y_true=y, y_pred=y_pred)
-
         # optimizer zero grad
         optimizer_1.zero_grad()
 
@@ -834,9 +809,6 @@ for epoch in range(epochs):
 
         # calculate loss
         loss = loss_fn(y_logits, y)
-
-        # calculate accuracy
-        acc = accuracy_fn(y_true=y, y_pred=y_pred)
 
         # optimizer zero grad
         optimizer_2.zero_grad()
