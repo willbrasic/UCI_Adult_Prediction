@@ -1,6 +1,6 @@
 """
 
-UCI Adult PyTorch Neural Network
+UCI Adult Prediction Using PyTorch Neural Network
 
 """
 
