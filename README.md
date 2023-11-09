@@ -72,9 +72,9 @@ The data cleaning procedure can be found at UCI_Adult_PyTorch.py. Here are some 
 that summarize the outcome of interest (income) along with the covariates used
 for prediction:
 
-![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Data_Summary_1.png)
+![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Data_Summary_1.png)
 
-![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Data_Summary_2.png)
+![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Data_Summary_2.png)
 
 Also, the data does have a slight issue regarding class proportions with class 1
 (individuals making more than $50,000) being under-sampled. I tested if SMOTE could
@@ -84,7 +84,7 @@ me to not use this method as I prioritize accuracy in general over an increase i
 For the sake of completeness, here is the confusion matrix when model_1,
 which is discussed in the Training section, is used on the data when SMOTE is applied:
 
-![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Smote_Model_1_CM.png)
+![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Smote_Model_1_CM.png)
 
 ## Training
 
@@ -101,9 +101,9 @@ Moreover, all neural networks implement early stopping.
 The training and validation loss and accuracy for model_0
 over epochs along with its confusion matrix looks as follows:
 
-![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Train_Val_Model_0.png)
+![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Train_Val_Model_0.png)
 
-![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_0_CM.png)
+![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_0_CM.png)
 
 The mean training and validation accuracy rate for model_0 over thirty epochs
 is 81.6424% and 81.8092%, respectively.
@@ -111,9 +111,9 @@ is 81.6424% and 81.8092%, respectively.
 The training and validation loss and accuracy for model_1
 over epochs along with its confusion matrix looks as follows:
 
-![Picture 6](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Train_Val_Model_1.png)
+![Picture 6](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Train_Val_Model_1.png)
 
-![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_1_CM.png)
+![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_1_CM.png)
 
 The mean training and validation accuracy rate for model_1 over thirty epochs
 is 80.8788% and 82.5968%, respectively.
@@ -121,9 +121,9 @@ is 80.8788% and 82.5968%, respectively.
 The training and validation loss and accuracy for model_2
 over epochs along with its confusion matrix looks as follows:
 
-![Picture 8](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Train_Val_Model_2.png)
+![Picture 8](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Train_Val_Model_2.png)
 
-![Picture 9](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_2_CM.png)
+![Picture 9](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_2_CM.png)
 
 The mean training and validation accuracy rate for model_1 over thirty epochs
 is 80.6205% and 81.8572%, respectively.
@@ -138,4 +138,4 @@ Thus, model_1 is selected for testing.
 
 The chosen model_1 has a testing accuracy of 82.227%. Here is its confusion matrix:
 
-![Picture 10](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_1_Test_CM.png)
+![Picture 10](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_PyTorch_Pictures/UCI_Adult_Model_1_Test_CM.png)
