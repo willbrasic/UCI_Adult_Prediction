@@ -38,7 +38,7 @@ imbalanced_learn==0.11.0
 imblearn==0.0
 matplotlib==3.7.2
 numpy==1.25.2
-pandas==2.1.1
+pandas==2.1.2
 scikit_learn==1.3.0
 seaborn==0.13.0
 torch==2.0.1
@@ -65,12 +65,38 @@ The data cleaning procedure can be found at UCI_Adult_Scikit-Learn.py. Here are 
 that summarize the outcome of interest (income) along with the covariates used
 for prediction:
 
-![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_1.png)
+![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scikit_Learn_Pictures/UCI_Adult_Data_Summary_1.png)
 
-![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Pictures/UCI_Adult_Picture_2.png)
+![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_Data_Summary_2.png)
+
+Also, the data does have a slight issue regarding class proportions with class 1
+(individuals making more than $50,000) being under-sampled. I tested if SMOTE could
+improve this. While recall did increase, overall validation accuracy decreased leading
+me to not use this method as I prioritize accuracy in general over an increase in recall.
 
 ## Training
 
+I create a variety models: logistic regression, lasso logistic regression, ridge logistic regression, elastic net logistic regression, and random forest. In an attempt to find the best hyperparameters for each model, I use a random search.
+All models perform very similarly, but the random forest performs marginally better than the rest so I choose that algorithm to evaluate testing performance. I refrain from using boosting due to computational requirements.
 
+Below are the learning curves for each model along with the validation curves for lasso and ridge for varying levels of the penalization parameter.
+
+![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Learning_Curve.png)
+
+![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Lasso_Learning_Curve.png)
+
+![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Ridge_Learning_Curve.png)
+
+![Picture 6](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_Lasso_Ridge_Validation_Curve.png)
+
+![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Enet_Learning_Curve.png)
+
+![Picture 8](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_RF_Learning_Curve.png)
 
 ## Results
+
+Evaluating the random forest model on the testing data gives rise to the following confusion matrix:
+
+![Picture 9](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_RF_CM.png)
+
+The accuracy rate for this model is 82.24%. 
