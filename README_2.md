@@ -65,7 +65,7 @@ The data cleaning procedure can be found at UCI_Adult_Scikit-Learn.py. Here are 
 that summarize the outcome of interest (income) along with the covariates used
 for prediction:
 
-![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scikit_Learn_Pictures/UCI_Adult_Data_Summary_1.png)
+![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_Data_Summary_1.png)
 
 ![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_Data_Summary_2.png)
 
@@ -99,4 +99,4 @@ Evaluating the random forest model on the testing data gives rise to the followi
 
 ![Picture 9](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_RF_CM.png)
 
-The accuracy rate for this model is 82.24%. 
+The accuracy rate for this model is 82.24%.
