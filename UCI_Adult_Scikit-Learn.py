@@ -1,8 +1,6 @@
 """ 
 
-The University of Arizona
-INFO 557
-Homework 3
+UCI Adult Prediction Using ML
 
 """
 
