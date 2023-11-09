@@ -89,7 +89,7 @@ Below are the learning curves for each model along with the validation curves fo
 
 ![Picture 6](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_Lasso_Ridge_Validation_Curve.png)
 
-![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_LR_Enet_Learning_Curve.png)
+![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_LR_ENet_Learning_Curve.png)
 
 ![Picture 8](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_RF_Learning_Curve.png)
 
