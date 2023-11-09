@@ -65,9 +65,9 @@ The data cleaning procedure can be found at UCI_Adult_Scikit-Learn.py. Here are 
 that summarize the outcome of interest (income) along with the covariates used
 for prediction:
 
-![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_Data_Summary_1.png)
+![Picture 1](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_Data_Summary_1.png)
 
-![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_Data_Summary_2.png)
+![Picture 2](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_Data_Summary_2.png)
 
 Also, the data does have a slight issue regarding class proportions with class 1
 (individuals making more than $50,000) being under-sampled. I tested if SMOTE could
@@ -81,22 +81,22 @@ All models perform very similarly, but the random forest performs marginally bet
 
 Below are the learning curves for each model along with the validation curves for lasso and ridge for varying levels of the penalization parameter.
 
-![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Learning_Curve.png)
+![Picture 3](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_LR_Learning_Curve.png)
 
-![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Lasso_Learning_Curve.png)
+![Picture 4](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_LR_Lasso_Learning_Curve.png)
 
-![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Ridge_Learning_Curve.png)
+![Picture 5](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_LR_Ridge_Learning_Curve.png)
 
-![Picture 6](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_Lasso_Ridge_Validation_Curve.png)
+![Picture 6](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_Lasso_Ridge_Validation_Curve.png)
 
-![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_LR_Enet_Learning_Curve.png)
+![Picture 7](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_LR_Enet_Learning_Curve.png)
 
-![Picture 8](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_RF_Learning_Curve.png)
+![Picture 8](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_RF_Learning_Curve.png)
 
 ## Results
 
 Evaluating the random forest model on the testing data gives rise to the following confusion matrix:
 
-![Picture 9](https://github.com/willbrasic/UCI_Adult_PyTorch_sklearn/blob/main/UCI_Adult_Scitkit-Learn_Pictures/UCI_Adult_RF_CM.png)
+![Picture 9](https://github.com/willbrasic/UCI_Adult_PyTorch_Scikit-Learn/blob/main/UCI_Adult_Scikit-Learn_Pictures/UCI_Adult_RF_CM.png)
 
 The accuracy rate for this model is 82.24%.
