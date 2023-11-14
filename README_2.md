@@ -77,7 +77,7 @@ me to not use this method as I prioritize accuracy in general over an increase i
 ## Training
 
 I create a variety models: logistic regression, lasso logistic regression, ridge logistic regression, elastic net logistic regression, and random forest. In an attempt to find the best hyperparameters for each model, I use a random search.
-All models perform very similarly, but the random forest performs marginally better than the rest so I choose that algorithm to evaluate testing performance. I refrain from using boosting due to computational requirements.
+All models perform very similarly, but the random forest performs marginally better than the rest so I choose that algorithm to evaluate testing performance. I leave gradient boosting methods out for the time being.
 
 Below are the learning curves for each model along with the validation curves for lasso and ridge for varying levels of the penalization parameter.
 
