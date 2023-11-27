@@ -72,7 +72,9 @@ for prediction:
 Also, the data does have a slight issue regarding class proportions with class 1
 (individuals making more than $50,000) being under-sampled. I tested if SMOTE could
 improve this. While recall did increase, overall validation accuracy decreased leading
-me to not use this method as I prioritize accuracy in general over an increase in recall.
+me to not use this method as I prioritize accuracy in general over a decrease in the
+number of false negatives (predicting income <= 50K when the true label is > 50K).
+A decrease in the number of false negatives implies sensitivity rises.
 
 ## Training
 
